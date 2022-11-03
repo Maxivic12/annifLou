@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Page secrète...</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <!-- Page où Lou arrive (elle doit enter son mdp) -->
+        <div id="mdp-page" class="mdp-page">
+            <img src="assets/bg_mdp.jpg" alt="Arrière-plan" />      
+            <div class="form">
+                    <div class="text-form">
+                        <h1>Tu es bien Lou ?</h1>
+                        <p>
+                            Vu que ce site est destiné à Lou, il faut éviter toute intrusion avec un code. 
+                            Si tu es Lou tu peux facilement répondre à cette question : <br />
+                            
+                            <h3>"Qu'est-ce que je suis devenu la première fois qu'on s'est embrassé ?".</h3>
+                        </p>
+
+                        <label>" - Est-ce que je peux être... 
+                            <input type="text" id="text_input" />
+                            ? "
+                        </label>     
+                        <div id="connect-button" class="connect-button" onclick="clic()">S'embrasser</div>    
+                    </div>
+                    <div id="popup" class="still"><p>Wsh pourquoi tu m'embrasses sale pute ?</p></div>  
+            </div>
+        </div> 
+
+        <!-- Page d'acceuil après qu'elle se soit connectée -->
+        <div id="connected-page", class="connected-page">
+            <header>
+                <ul>
+                    <li><a href="acceuil.html"> Acceuil</a></li>
+                    <li><a href="nos-souvenirs.html">Nos souvenirs</a></li>
+                    <li><a href="cadeau.html">Cadeau</a></li>
+                    <li><a href="ton_histoire.html">Ton histoire</a></li>
+                    <li><a href="#">Poème</a></li>
+                    <li><a href="sentiments.html">Sentiment</a></li>
+                     
+                </ul>
+            </header>
+            <section class="souhaits">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                    officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                </p>
+                <img src="assets/acceuil-img.jpeg" alt="Nous deux, amoureux" class="photo-acceuil">
+            </section>
+        </div>
+    </body>
+</html>

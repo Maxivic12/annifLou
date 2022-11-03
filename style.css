@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body 
+{
+    background-color: #fd9d9d;
+}
+
+/* PAGE MOT DE PASSE */
+
+/* Animation de la popu quand elle entre le mauvais mot de passe */
+@keyframes popup {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fly {
+    0% {
+        left: -10%;
+        top: 80%;
+    }
+    25% {
+        left: -10%;
+        top: 10%;
+    }
+    50% {
+        left: 100%;
+        top: 10%;
+    }
+    75% {
+        left: 100%;
+        top: 80%;
+    }
+    100% {
+        left: -10%;
+        top: 80%;
+    }
+}
+
+.mdp-page
+{
+    background: #020202;
+    height: 100vh;
+    display: flex;
+    color: white;
+}
+
+.mdp-page img
+{
+    flex: 1;
+    margin-left: 70px;
+}
+
+.mdp-page .form
+{
+    margin: 10vh 12vw;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: #731a1a;
+    border-radius: 30px;
+}
+
+.mdp-page .text-form
+{
+    width: 100%;
+    height: 100%;
+    padding: 50px 50px 0 50px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: #731a1a;
+    border-radius: 30px;
+}
+
+.mdp-page .form h1 
+{
+    font-size: 3em;
+}
+
+.mdp-page .form p 
+{
+    font-size: 1.1em;
+}
+
+.mdp-page .form h3
+{
+    font-size: 1em;
+}
+
+.mdp-page .form .connect-button
+{
+    width: 140px;
+    height: 80px;
+    font-size: 1.2em;
+    background-color: #22731a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+
+.mdp-page .form input
+{
+    width: 150px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+.mdp-page .form .connect-button:hover
+{
+    transform: scale(1.2);
+}
+
+#popup
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #020202;
+}
+
+.still, .popup p 
+{
+    cursor: default;
+    opacity: 0;
+}
+
+.bouger 
+{
+    opacity: 1;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-name: popup;
+}
+
+
+/* ACCEUIL */
+.connected-page
+{
+    display: none;
+    height: 100vh;
+}
+
+/* HEADER */
+
+header
+{
+    width: 100%;
+    background-color: #d3e8b2;
+    z-index: 1000;
+} 
+
+header ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 30px 0;
+    
+}
+
+header ul li a
+{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+/* Souhaits - Acceuil*/
+.souhaits
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.souhaits p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    height: 45vh;
+    width: 40vw;
+    margin-right: 100px;
+}
+
+.souhaits img.photo-acceuil
+{
+    height: 45vh;
+    border-style: double;  
+    border-width: 10px; 
+}
+
+/* Souvenirs (cards) */
+
+.souvenir-page 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-column, .second-column   
+{
+    position: absolute;
+}
+
+.second-column  
+{
+    right: 300px;
+}
+
+.first-column
+{
+    left: 300px;
+}
+
+.card
+{
+    perspective: 1000px;
+    height: 100%;
+    position: relative;
+    margin-top: 100px;   
+}
+
+.card:nth-child(1) .back-face, .front-face, .card
+{
+    width: 577px;
+    height: 433px;
+} 
+
+.card:nth-child(2) .back-face, .front-face, .card
+{
+    width: 330px;
+    height: 586px;
+} 
+
+.card:nth-child(3) .back-face, .front-face, .card
+{
+    width: 316px;
+    height: 561px;
+} 
+
+.card:nth-child(4) .back-face, .front-face, .card
+{
+    width: 600px;
+    height: 332px;
+} 
+
+.card:nth-child(4) video, .card
+{
+    width: 600px;
+} 
+
+
+.card:nth-child(5) .back-face, .front-face, .card
+{
+    width: 294px;
+    height: 392px;
+} 
+
+.card:nth-child(6) .back-face, .front-face, .card
+{
+    width: 364px;
+    height: 577px;
+} 
+
+.card:nth-child(7) .back-face, .front-face, .card
+{
+    width: 373px;
+    height: 497px;
+} 
+
+.card1 .back-face, .front-face
+{
+    width: 365px;
+    height: 649px;
+} 
+
+.card2 .back-face, .front-face
+{
+    width: 560px;
+    height: 420px;
+} 
+
+.card3 .back-face, .front-face
+{
+    width: 449px;
+    height: 335px;
+}
+
+.card4 .back-face, .front-face
+{
+    width: 365px;
+    height: 486px;
+} 
+
+.card5 .back-face, .front-face
+{
+    width: 341px;
+    height: 625px;
+} 
+
+.card6 .back-face, .front-face, video
+{
+    width: 341px;
+    height: 100%
+} 
+
+.cards .card .front-face
+{
+    transition: all 0.6s ease;
+}
+
+.cards .card .back-face
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform:rotateY(-180deg) translateY(-30px);
+    transition: all 0.6s ease;
+    padding: 7px;
+}
+
+.card:hover .back-face
+{
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.card:hover .front-face
+{
+    opacity: 0;
+    transform:rotateY(180deg);
+}
+
+/* Cadeau */
+.cadeau-page
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.cadeau
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+}
+
+.cadeau img
+{
+    position: absolute;
+    left: 20%;
+    top: 80%;
+    height: 150px;
+    animation: fly 4s ease-in-out 0s infinite;
+}
+
+.cadeau-texte
+{
+    width: 80vw;
+    padding: 100px;
+}
+
+/* HISTOIRE */
+.photos 
+{
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.histoire p.one
+{
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+    font-size: 21px;
+    text-align: center;
+}
+
+.histoire p.two
+{
+    margin: auto;
+    font-size: 21px;
+    text-align: center;
+}
+
+
+.histoire .photos img 
+{
+    width: 300px;
+    height: 100%;
+    margin-top: 20px;
+}
+
+/* Sentiments */
+.sentiments 
+{
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+}
